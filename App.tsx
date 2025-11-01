@@ -5,10 +5,10 @@ import { StyleSheet, Text, TextInput, View } from "react-native";
 export default function App() {
   const [input, setInput] = useState<string>("");
   const lowerLimit: number = input
-    ? Math.floor((220 - Number(input)) * 0.65)
+    ? Math.floor((220 - parseInt(input)) * 0.65)
     : 0;
   const upperLimit: number = input
-    ? Math.floor((220 - Number(input)) * 0.85)
+    ? Math.floor((220 - parseInt(input)) * 0.85)
     : 0;
 
   return (
